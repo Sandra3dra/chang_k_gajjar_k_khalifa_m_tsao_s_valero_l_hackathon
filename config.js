@@ -1,9 +1,9 @@
 const config = {
-    uname: "root",
-    upass: "root", // windows users leave this blank
+    uname: "b71f531e61ab76",
+    upass: "5778d0e6", // windows users leave this blank
     port: 8889, // 3306 for windows or linux
-    host: "localhost",
-    db: "db_thermosecurity"
+    host: "cleardb.net",
+    db: "heroku_16cad15fc6fd2d3"
 }
 
 module.exports = config;
