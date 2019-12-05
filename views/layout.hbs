@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<!-- sets site size to equal the device width -->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- reset before main css (reset, then rewrite) -->
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href=“https://fonts.googleapis.com/css?family=Roboto%7CRubik&display=swap” rel=“stylesheet”>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    
+    {{!-- we'll have to make this dynamic to change with the page --}}
+    <title>ThermoSecurity™ System | HouseCom™ </title>
+
+</head>
+<body>
+    <h1 class="hidden">ThermoSecurity™ Home</h1>
+    <div class="nav-positioning">
+        <div class="main-nav-con">
+            <a class="logo" href="/"><img src="images/thermosecurity_Logo.svg" alt="logo"/></a>
+            <i class="fa fa-bars hamburger"></i>
+            <nav class="main-nav">
+                <h2 class="hidden">Main Navigation</h2>
+                <ul>
+                    <a href="#f1"><li>Design</li></a>
+                    <a href="#f2"><li>Efficiency</li></a>
+                    <a href="#f3"><li>Controls</li></a>
+                    <a href="#f4"><li>Tech Specs</li></a>
+                </ul>
+
+                <nav class="main-social">
+                    <h3 class="hidden">Social Media</h3>
+                    <div>
+                        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+                        <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.svg" alt="Twitter"></a>
+                        <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.svg" alt="YouTube"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+    </div>
+    <div class="main-con">
+        {{!-- handlebars will render its views here --}}
+        {{{ body }}}
+        {{!-- testing linking to other view files (pages) --}}
+        {{!-- <a href="dashboards">SIGN IN (Go to Dashboard)</a>
+        <a href="/">SIGN OUT (Go Back to Sign In)</a>
+        <a href="products">GO TO PRODUCTS</a> --}}
+    </div>
+    <footer>
+        <div class="btn-wrap">
+            <div class="btn-con">
+                <a href="#">Company Site</a>
+            </div>
+            <div class="btn-con">
+                <a href="#">Find a Store</a>
+            </div>
+        </div>
+        <nav class="footer-social">
+            <h3 class="hidden">Social Media</h3>
+            <div>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.svg" alt="Twitter"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.svg" alt="YouTube"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
+            </div>
+        </nav>
+        <p>© HouseCom™ ThermoSecurity™ System 2019</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/main_nav.js"></script>
+    <script src="js/video_controls.js"></script>
+</body>
+</html>

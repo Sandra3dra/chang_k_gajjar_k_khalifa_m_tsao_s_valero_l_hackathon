@@ -1,0 +1,51 @@
+// sass --watch sass:public/css --style compressed
+@charset "UTF-8";
+@import "_vars";
+@import "_hero";
+@import "_display";
+@import "_feature";
+@import "_main_nav";
+@import "_footer";
+@import "_welcome";
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+// body {
+//     background: tomato;
+// }
+
+.main-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    // background: gold;
+    // text-align: center;
+}
+
+.test-image {
+    max-width: 200px;
+    align-self: center;
+    margin: 20px;
+}
