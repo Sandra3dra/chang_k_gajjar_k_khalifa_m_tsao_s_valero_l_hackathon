@@ -1,0 +1,131 @@
+.nav-positioning {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.main-nav-con {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $mobile-margin;
+    // background: tomato;
+    position: relative;
+}
+
+.main-nav {
+	display: none;
+}
+
+.hamburger {
+	font-size: 40px;
+	color: white;
+    transition: all .2s ease-in-out;
+    align-self: center;
+    z-index: 2;
+}
+
+.hamburger.expanded {
+    color: $dark-blue;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.main-nav.slide-toggle {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: absolute;
+    height: 100vh;
+    top: -1%;
+	width: 30%;
+	padding: 50px;
+	right: 0;
+    background: rgba(14, 24, 56, 0.90);
+    ul {
+        margin-top: 60px;
+        li {
+            margin-bottom: 55px;
+        }
+    }
+    a {
+        @include h3-class;
+        color: white;
+        transition: all ease;
+        &:focus {
+            color: $light-blue;
+        }
+        &:hover {
+            color: $light-blue;
+        }
+    }
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.main-social {
+    display: flex;
+    flex-direction: row;
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img {
+            box-sizing: border-box;
+            height: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-size) {
+    .main-nav-con {
+        padding: $tablet-margin;
+    }
+}
+
+@media screen and (min-width: $desktop-size) {
+    .hamburger {
+        display: none;
+    }
+
+    .main-nav-con {
+        padding: 30px $desktop-margin;
+        background: rgba(14, 24, 56, 0.80);
+        a {
+            transition: all .3s ease;
+            &:hover {
+                color: $dark-blue;
+            }
+        }
+    }
+
+    .main-nav {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            justify-content: space-between;
+        }
+        a {
+            @include h3-class;
+            color: white;
+        }
+    }
+
+    .main-social {
+        display: none;
+    }
+
+    .logo {
+        align-self: center;
+        margin-right: 300px;
+    }
+}
